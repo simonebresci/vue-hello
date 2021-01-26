@@ -14,13 +14,38 @@
     <div id="root">
       <!-- RGB SELECTOR -->
       <h1>RGB SELECTOR</h1>
+
+      <!-- IMMAGINI -->
+      <img class="personaggi-ico" @click="selectPinguino" src="./img/pinguino.png" alt="pinguino">
+      <img class="personaggi-ico" @click="selectLeone" src="./img/leone.png" alt="leone">
+      <img class="personaggi-ico" @click="selectAlpaca"src="./img/alpaca.png" alt="alpaca">
+      <!-- /IMMAGINI -->
+
+
       <!-- BOX1 -->
       <h2 class="box-name">{{box1Name}}</h1>
+      <!-- <input v-model="box1Img"> -->
+      <button class='shape-circle bg-red' @click="subtract10red"> -10 </button>
       <input class="border-red"   v-model="colore1R">
+      <button class='shape-circle bg-red' @click="add10red"> +10 </button>
+      <button class='shape-circle bg-green' @click="subtract10green"> -10 </button>
       <input class="border-green" v-model="colore1G">
+      <button class='shape-circle bg-green' @click="add10green"> +10 </button>
+      <button class='shape-circle bg-blue' @click="subtract10blue"> -10 </button>
       <input class="border-blue"  v-model="colore1B">
+      <button class='shape-circle bg-blue' @click="add10blue"> +10 </button>
+      <label for="bg-transparency">Transparency =></label>
+      <button name="bg-transparency" class='shape-circle' @click="subtract1transp"> -1 </button>
       <input class="border"       v-model="colore1T">
-      <div class="box-1" :style="'background-color: rgba( ' + colore1R + ',' + colore1G +',' + colore1B + ',' + colore1T +');' ">
+      <button class='shape-circle' @click="add1transp"> +1 </button>
+      <label for="btn-border-radius">Border-radius =></label>
+      <button class='shape-circle' @click="subtract10BorderRadius"> -10 </button>
+      <input class="border"       v-model="box1BorderRadius">
+      <button class='shape-circle' @click="add10BorderRadius"> +10 </button>
+
+      <div class="box-1" :style="'background-color: rgba( ' + colore1R + ',' + colore1G +',' + colore1B + ',' + colore1T +');border-radius:' + box1BorderRadius + 'px;' ">
+        <img class="personaggi" :style="'border-radius: ' + box1BorderRadius +'px;'" :src="'img/' + box1Img + '.png'">
+
 
       </div>
       <!-- /BOX1 -->
