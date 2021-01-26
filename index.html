@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Hello</title>
+    <!-- Vue Js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+
+    <!-- Vue JS Area -->
+    <div id="root">
+      <!-- Area popolata da JS -->
+      <h1> {{messaggio}}</h1>
+      <p>Scrivi {{animale}} all'interno dell'area di testo</p>
+      <input v-model="pathImg">
+      <img :src="'./img/' +pathImg + '.png'" alt="pinguino">
+    </div>
+    <!-- /Vue JS Area -->
+  </body>
+  <script src="./js/main.js" charset="utf-8"></script>
+</html>
