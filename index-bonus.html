@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Hello</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Vue Js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+
+    <!-- Vue JS Area -->
+    <div id="root">
+      <!-- RGB SELECTOR -->
+      <h1>RGB SELECTOR</h1>
+      <!-- BOX1 -->
+      <h2 class="box-name">{{box1Name}}</h1>
+      <input class="border-red"   v-model="colore1R">
+      <input class="border-green" v-model="colore1G">
+      <input class="border-blue"  v-model="colore1B">
+      <input class="border"       v-model="colore1T">
+      <div class="box-1" :style="'background-color: rgba( ' + colore1R + ',' + colore1G +',' + colore1B + ',' + colore1T +');' ">
+
+      </div>
+      <!-- /BOX1 -->
+
+      <!-- BOX2 -->
+      <h2 class="box-name">{{box2Name}}</h1>
+      <input class="border-red"   v-model="colore2R">
+      <input class="border-green" v-model="colore2G">
+      <input class="border-blue"  v-model="colore2B">
+      <input class="border"       v-model="colore2T">
+      <div class="box-2" :style="'background-color: rgba( ' + colore2R + ',' + colore2G +',' + colore2B + ',' + colore2T +');' ">
+
+      </div>
+      <!-- /BOX2 -->
+    </div>
+    <!-- /Vue JS Area -->
+  </body>
+  <script src="./js/main-bonus.js" charset="utf-8"></script>
+</html>
